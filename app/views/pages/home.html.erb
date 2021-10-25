@@ -1,0 +1,8 @@
+<h1>Welcome</h1>
+
+<h1>It's a homepage</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<% if @current_user.present? %>
+<h1>Welcome back <%= @current_user.email %></h1>
+<% end %>
