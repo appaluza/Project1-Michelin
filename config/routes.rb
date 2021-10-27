@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-  get 'restaurants/new'
+
+  
+  get 'bookings/new'
+  get '/login' => 'session#new'
+  get 'session/new'
   root :to => 'pages#home'
-  resources :users, :only => [:index, :new, :create]
+  resources :clients, :only => [:edit, :new, :create]
 
 # NOT CRUD
-  get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
-resources :restaurants, :only => [:new, :create]
+  resources :restaurants, :only => [:new, :show, :create]
 
 end

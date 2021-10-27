@@ -1,8 +1,21 @@
 <h1>Welcome</h1>
 
-<h1>It's a homepage</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>What Restaurant would you like to have a dinner at?</h1>
 
-<% if @current_user.present? %>
-<h1>Welcome back <%= @current_user.email %></h1>
+
+<% if @current_client.present? %>
+<h1><%= @current_client.name %></h1>
+<% end %>
+
+<% if @current_client.present? %>
+  <% @restaurants.each do |restaurant| %>
+
+    <p> <%= restaurant.name %> </p>
+    <p> rating: <%= restaurant.rating %> stars </p>
+    <p> <%= image_tag restaurant.image %> </p>
+
+<%= link_to 'Book now', restaurant_path(restaurant) %>
+
+  <% end %>
+
 <% end %>
