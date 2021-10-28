@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.feature {
+  width: 300px;
+}
+
+body {
+  background-color: 
+}
