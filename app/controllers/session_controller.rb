@@ -3,7 +3,7 @@ class SessionController < ApplicationController
   end
 
   def create
-    clent = Client.find_by :email => params[:email]
+    client = Client.find_by :name => params[:name]
     if client.present? && client.authenticate(params[:password])
       session[:client_id] = client.id
       redirect_to root_path

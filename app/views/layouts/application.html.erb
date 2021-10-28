@@ -10,19 +10,21 @@
 </head>
 
 <body>
+  <div class="container">
   <nav>
     <%= link_to 'Home', root_path %>
     <% if @current_client.present? %>
     <%= link_to "Log out #{ @current_client.name }", login_path, :method => 'delete' %>
-    <%= @current_client.name %>
+
 
     <% else %>
     <%= link_to 'Sign up', new_client_path %>
     <%= link_to 'Sign in', login_path %>
-    
+
     <% end %>
   </nav>
 
   <%= yield %>
+  </div>
 </body>
 </html>

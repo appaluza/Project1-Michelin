@@ -1,12 +1,20 @@
 <h1>Sign Up!</h1>
 
+<div class="form-group">
 <%= form_for @client do |f| %>
 <%= f.label :email %>
 <%= f.email_field:name %>
+</div>
+
+<div class="form-group">
 <%= f.label :password %>
 <%= f.password_field :password %>
+</div>
+
+<div class="form-group">
 <%= f.label :password_confirmation %>
 <%= f.password_field :passsword_confirmation %>
+</div>
+<%= f.submit "Sign up!", :class => 'btn btn-outline-info' %>
 
-<%= f.submit "Sign up!" %>
 <% end %>

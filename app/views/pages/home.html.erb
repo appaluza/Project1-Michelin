@@ -1,6 +1,12 @@
-<h1>Welcome</h1>
 
-<h1>What Restaurant would you like to have a dinner at?</h1>
+
+<h4 class="display-4">Welcome to</h4>
+<h1 class="display-3">MICHELIN BOOKER</h1>
+
+
+<p>What Restaurant would you like to have a dinner at?<p>
+
+<img src="https://mlsiliconvalley.com/get/files/image/galleries/Manresa_Into_the_Vegetable_Garden_photo_credit_Marc_Fiorito.jpg" class="img-fluid" alt="https://mlsiliconvalley.com/get/files/image/galleries/Manresa_Into_the_Vegetable_Garden_photo_credit_Marc_Fiorito.jpg">
 
 
 <% if @current_client.present? %>
@@ -12,9 +18,7 @@
 
     <p> <%= restaurant.name %> </p>
     <p> rating: <%= restaurant.rating %> stars </p>
-    <p> <%= image_tag restaurant.image %> </p>
-
-<%= link_to 'Book now', restaurant_path(restaurant) %>
+    <%= link_to 'See more', restaurant_path(restaurant) %>
 
   <% end %>
 

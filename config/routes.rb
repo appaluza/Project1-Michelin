@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  
-  get 'bookings/new'
+
+  resources :bookings 
   get '/login' => 'session#new'
   get 'session/new'
   root :to => 'pages#home'

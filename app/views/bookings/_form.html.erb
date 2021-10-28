@@ -1,5 +1,11 @@
 <%= form_for @booking do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.label :title, 'Name' %>
+  <%= f.text_field :title, :required => true %>
+  <%= f.label :dob, 'Date of Booking' %>
+  <%= f.text_field :dob, :placeholder => 'YYYY-MM-DD', :required => true %>
+  <%= f.label :time %>
+  <%= f.text_field :time, :required => true %>
+  <%= f.label :seats %>
+  <%= f.number_field :seats, :required => true %>
   <%= f.submit %>
 <% end %>

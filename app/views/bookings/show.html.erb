@@ -1,0 +1,10 @@
+
+<%= @booking.title %>
+<%= @booking.dob %>
+<%= @booking.time %>
+<%= @booking.seats %>
+
+<div class="controls">
+  <%= link_to 'Edit booking', edit_booking_path(@booking) %>
+  <%= link_to 'Delete booking', @booking, :method => 'delete', :class => 'hotdogs', :data => { :confirm => 'Are you sure?' } %>
+</div>
